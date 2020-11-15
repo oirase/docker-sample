@@ -3,10 +3,15 @@ services:
   app:
     build:
       context: ./app
+    volumes:
+     - ./app: .
   db:
     build:
       context: ./db
     image: "mysql:sample"
     ports:
      - "5000:5000"
+    enviroment:
+      MYSQL_ROOT_PASWORD: example
+
 
