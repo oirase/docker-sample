@@ -4,7 +4,7 @@ services:
     build:
       context: ./app
     volumes:
-     - ./app:.
+     - ./app:/.
   db:
     build:
       context: ./db
