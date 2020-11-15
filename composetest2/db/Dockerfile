@@ -1,2 +1,2 @@
 FROM mysql:latest
-COPY user
+COPY user .

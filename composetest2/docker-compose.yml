@@ -7,4 +7,6 @@ services:
     build:
       context: ./db
     image: "mysql:sample"
+    ports:
+     - "5000:5000"
 
