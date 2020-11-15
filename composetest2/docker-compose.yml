@@ -12,6 +12,6 @@ services:
     ports:
      - "5000:5000"
     environment:
-      MYSQL_ROOT_PASWORD: example
+      MYSQL_ROOT_PASSWORD: example
 
 
