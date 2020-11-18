@@ -13,8 +13,8 @@ services:
     ports:
       - 80:80
     volumes:
-      -./myapp:/var/www
-      -./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./myapp:/var/www
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
     depends_on:
       - php
 
