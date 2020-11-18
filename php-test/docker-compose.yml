@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  php:
+    container_name: php
+    build: ./docker/php
+    volumes:
+     - ./myapp/:/var/www
+
+  nginx:
+    image: nginx
+    container_name: nginx
+    ports:
+      - 80:80
+    volumes:
+      -./public:/var/www
+      -./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends.on:
+      - php
+
+  db:
+    image: mysql
+    container_name: db
+    ports:
+      - "5000:5000"
+    enviroment:
+      MYSQL_ROOT_PASSWORD: example
+    ports:
+      - 3306:3306
+
+
