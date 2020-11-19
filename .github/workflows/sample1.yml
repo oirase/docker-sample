@@ -10,8 +10,6 @@ jobs:
 
     steps:
       - name: checkout dev
-        uses: actions/checkout@v2
-        with:
-          ref: dev
+        users: actions/checkout@v2
 
 
