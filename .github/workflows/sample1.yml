@@ -1,15 +1,11 @@
 name: sample1
 
-on:
-  push:
-    branches: [ dev ]
+on: [ push ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: checkout dev
-        users: actions/checkout@v2
-
+      - uses: actions/checkout@v2
+      - run: touch action1.txt
 
