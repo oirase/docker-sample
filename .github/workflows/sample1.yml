@@ -1,15 +1,13 @@
 name: sample1
 
-on:
-  push:
-    branches: [ dev ]
+on: [ push ]
 
 jobs:
-  build:
+  web_sample:
+    name: my_job
     runs-on: ubuntu-latest
-
     steps:
-      - name: checkout dev
-        users: actions/checkout@v2
-
+    - name: ActionTest
+      run: |
+        echo jobs.web_sample.name
 
