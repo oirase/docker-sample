@@ -3,9 +3,11 @@ name: sample1
 on: [ push ]
 
 jobs:
-  build:
+  web_sample:
+    name: my_job
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - run: touch action1.txt
+    - name: checkout
+      uses: actions/checkout@v2
+
 
