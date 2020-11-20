@@ -1,7 +1,7 @@
 name: sample2
 
 on:
-    scedule:
+    schedule:
       - cron: '*/5 * * * *'
 
 jobs:
@@ -10,5 +10,5 @@ jobs:
     steps:
       - name: scedule_test
         uses: actions/checkout@v2
-        run: echo scedule_test
+        run: echo schedule_test
 
