@@ -8,7 +8,12 @@ jobs:
   build:
     runs-on: ubuntu
     steps:
-      - name: scedule_test
+      - name: checkout
         uses: actions/checkout@v2
-        run: echo schedule_test
+
+      - name: scedule_test
+        env:
+          TOKEN: 'hello'
+        run: |
+          echo 'hi'
 
