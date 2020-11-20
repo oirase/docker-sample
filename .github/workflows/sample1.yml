@@ -8,6 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: ActionTest
-      run: |
-        echo jobs.web_sample.name
+      run: echo ${{ jobs.web_sample.name }}
 
