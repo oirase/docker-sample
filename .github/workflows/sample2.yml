@@ -1,0 +1,14 @@
+name: sample2
+
+on:
+    scedule:
+      - cron: '*/5 * * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu
+    steps:
+      - name: scedule_test
+        uses: actions/checkout@v2
+        run: echo scedule_test
+
