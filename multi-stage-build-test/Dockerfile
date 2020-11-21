@@ -1,6 +1,6 @@
 FROM alpine:latest AS builder
-WORKDIR /work
 ENV DIRPATH /path
+WORKDIR /work
 ADD test2.txt .
 RUN pwd && echo DIRPATH
 
