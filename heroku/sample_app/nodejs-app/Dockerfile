@@ -1,3 +1,3 @@
-FROM node
+FROM node:latest
 COPY server.js .
-CMD ["node", "server.js", 8080]
+CMD ["node", "server.js", "8080"]

@@ -1,7 +1,7 @@
 const http = require('http')
 if (
   process.argv.length < 3 ||
-  typeof process.argv[2] !== 'number'
+  isNaN(process.argv[2])
 ) {
   throw new Error('Please input Port Number')
 }
