@@ -2,5 +2,7 @@ FROM node:latest
 WORKDIR /usr/src/app
 COPY server.js .
 RUN npm init -y && npm i express
-CMD ["node", "server.js", "8080"]
+RUN adduser -D myuser
+USER myuser
+CMD ["node", "server.js", $PORT]
 
