@@ -4,7 +4,11 @@ const redis = require('redis')
 
 module.exports = class Redis {
   constructor() {
-    this.redis = redis.createClient()
+    const config = {
+    host: '127.0.0.1',
+    port: 6379
+    }
+    this.redis = redis.createClient(config)
     this.redis.on('error', function (err) {
       throw err
     })
