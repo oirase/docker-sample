@@ -8,7 +8,7 @@ module.exports = class Redis {
     host: '127.0.0.1',
     port: 6379
     }
-    this.redis = redis.createClient(config)
+    this.redis = redis.createClient()
     this.redis.on('error', function (err) {
       throw err
     })
