@@ -8,8 +8,8 @@ services:
      - ./myapp/:/var/www
 
   nginx:
-    image: nginx
     container_name: nginx
+    build: ./docker/nginx
     ports:
       - 80:80
     volumes:
@@ -19,8 +19,8 @@ services:
       - php
 
   db:
-    image: mysql
     container_name: db
+    build: ./docker/db
     ports:
       - "5000:5000"
     environment:
