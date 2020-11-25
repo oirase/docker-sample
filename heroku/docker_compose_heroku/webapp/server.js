@@ -5,7 +5,7 @@ const express = require('express')
 const app = express()
 const RedisClass = require('./RedisClass.js')
 
-app.use('/docker-sample/', (req, res) => {
+app.use('/', (req, res) => {
   const Redis = new RedisClass()
   Redis.setData({
     key: 'frameworks',

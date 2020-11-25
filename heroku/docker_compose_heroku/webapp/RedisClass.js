@@ -10,7 +10,7 @@ module.exports = class Redis {
     })
   }
 
-  set setData (data) {
+  setData (data) {
     const client = this.redis
 
     client.exists(data.key, function (err, reply) {
@@ -26,7 +26,7 @@ module.exports = class Redis {
     })
   }
 
-  get getData () {
+  getData () {
     const client = this.redis
     client.hgetall('frameworks', function(err, result) {
       console.log('redis get', result)
