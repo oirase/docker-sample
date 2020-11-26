@@ -1,0 +1,16 @@
+version '3'
+
+services:
+  alpine:
+    build:
+      context: .
+      dockerfile: ./alpine/Dockerfile
+    enviroment:
+      - hoge="hello"
+    image: base:latest
+
+  db:
+    build:
+      context: .
+      dockerfile: ./db/Dockerfile
+    image: database:latest
