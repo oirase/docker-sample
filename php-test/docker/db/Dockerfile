@@ -1,3 +1,3 @@
 FROM mysql
-ARG hoge
+ARG hoge="good"
 RUN echo $hoge

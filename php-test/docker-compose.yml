@@ -9,6 +9,8 @@ services:
         hoge: "hello"
     volumes:
      - ./myapp/:/var/www
+    enviroment:
+      - age=20
 
   nginx:
     container_name: nginx
